@@ -31,6 +31,7 @@
   /*利用外層把overflow 隱藏起來*/
   overflow-x: hidden;
   margin: 0 auto;
+  position: relative;
 }
 
 .ImageContainer > .innerBox {
@@ -48,6 +49,57 @@
   height: inherit;
   display: inline-block;
   background-color: cornflowerblue;
+}
+.ImageContainer > .imgSelection {
+  background: rgba(255, 255, 255, 0.2);
+  height: 30px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ImageContainer > .imgSelection > .imgSelectionDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #fff;
+  margin: 0px 5px;
+}
+.ImageContainer > .imgSelection > .imgSelectionDot.selected {
+  background-color: orangered;
+}
+.ImageContainer > .prev::before {
+  content: "\2329";
+  position: absolute;
+  background: rgba(255, 255, 255, 0.2);
+  width: 65px;
+  height: 65px;
+  left: -30px;
+  top: 40%;
+  font-size: 3rem;
+  cursor: pointer;
+}
+.ImageContainer > .next::before {
+  content: "\232A";
+  position: absolute;
+  background: rgba(255, 255, 255, 0.2);
+  width: 65px;
+  height: 65px;
+  right: -30px;
+  top: 40%;
+  font-size: 3rem;
+  cursor: pointer;
+}
+
+.ImageContainer > .next {
+  background-color: orangered;
+}
+
+.ImageContainer > .imgSelection > .imgSelectionDot:hover {
+  cursor: pointer;
 }
 
 .ImageContainer > .innerBox > .imgBox > img {
