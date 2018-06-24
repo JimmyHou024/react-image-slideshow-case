@@ -1,6 +1,6 @@
 import React from "react";
 
-export default class ImageContainer extends React.Component {
+export default class ImageSlideshow extends React.Component {
   state = {
     selectedIndex: 1
   };
