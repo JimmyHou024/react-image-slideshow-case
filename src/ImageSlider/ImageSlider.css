@@ -1,0 +1,56 @@
+.ImageShowcase {
+  height: 100%;
+  width: 100%;
+}
+
+.ImageShowcase > .innerBox {
+  width: 80%;
+  margin: 0 auto;
+  height: 100px;
+  padding: 5px;
+  overflow-x: scroll;
+  white-space: nowrap;
+}
+
+.ImageShowcase > .innerBox > .imgBox {
+  width: 120px;
+  height: inherit;
+  display: inline-block;
+  background-color: cornflowerblue;
+}
+
+.ImageShowcase > .innerBox > .imgBox:not(:first-child) {
+  margin-left: 10px;
+}
+
+/* ImageContainer Style */
+
+.ImageContainer {
+  height: 100%;
+  width: 80%;
+  /*利用外層把overflow 隱藏起來*/
+  overflow-x: hidden;
+  margin: 0 auto;
+}
+
+.ImageContainer > .innerBox {
+  width: 100%;
+  margin: 0 auto;
+  height: 400px;
+  padding: 5px 0px;
+  overflow-x: visible;
+  white-space: nowrap;
+  /* transition: 1s transform ease-out; */
+}
+
+.ImageContainer > .innerBox > .imgBox {
+  width: 100%;
+  height: inherit;
+  display: inline-block;
+  background-color: cornflowerblue;
+}
+
+.ImageContainer > .innerBox > .imgBox > img {
+  width: 100%;
+  height: 100%;
+}
